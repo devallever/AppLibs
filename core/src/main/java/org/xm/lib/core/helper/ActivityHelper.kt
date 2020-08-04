@@ -32,8 +32,6 @@ import java.util.*
  */
 object ActivityHelper {
 
-    private val TAG = ActivityHelper::class.java.simpleName
-
     private val activityList = ArrayList<WeakReference<Activity>?>()
 
     fun size(): Int {

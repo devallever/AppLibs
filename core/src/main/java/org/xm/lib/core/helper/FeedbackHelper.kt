@@ -8,8 +8,8 @@ import org.xm.lib.core.base.App
 
 object FeedbackHelper {
 
-    private val FEEDBACK_TO = "devallever@163.com"
-    private val SUBJECT = ""
+    private const val FEEDBACK_TO = "devallever@163.com"
+    private const val SUBJECT = ""
 
     fun feedback(context: Context?) {
         // 必须明确使用mailto前缀来修饰邮件地址,如果使用

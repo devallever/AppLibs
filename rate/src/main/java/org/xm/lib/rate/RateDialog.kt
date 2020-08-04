@@ -17,10 +17,7 @@ import org.xm.lib.core.util.Tool
  * @author allever
  */
 
-class RateDialog(context: Context) : Dialog(
-    context,
-    R.style.CommonCustomDialogStyle
-) {
+class RateDialog(context: Context) : Dialog(context, R.style.CommonCustomDialogStyle) {
 
     private var mListener: RateListener? = null
 

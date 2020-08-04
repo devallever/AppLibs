@@ -2,6 +2,8 @@ package org.xm.lib.core.util
 
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.IntegerRes
+import androidx.annotation.StringRes
 import org.jetbrains.anko.runOnUiThread
 import org.xm.lib.core.base.App
 
@@ -41,12 +43,12 @@ fun toast(msg: String?) {
     }
 }
 
-fun toast(resId: Int) {
+fun toast(@StringRes resId: Int) {
     App.context.runOnUiThread {
         toast(getString(resId))
     }
 }
 
-fun getString(resId: Int): String {
+fun getString(@StringRes resId: Int): String {
     return App.context.resources.getString(resId)
 }

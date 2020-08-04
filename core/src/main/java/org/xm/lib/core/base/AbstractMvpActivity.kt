@@ -8,7 +8,9 @@ import android.os.Bundle
  * @date 18-2-28
  */
 abstract class AbstractMvpActivity<V, P : AbstractPresenter<V>?> : AbstractActivity() {
+
     protected var mPresenter: P? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mPresenter = createPresenter()

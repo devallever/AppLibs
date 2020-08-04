@@ -9,6 +9,7 @@ import android.view.ViewGroup
  * Created by Mac on 18/3/1.
  */
 abstract class AbstractMvpFragment<V, P : AbstractPresenter<V>?> : AbstractFragment() {
+
     protected var mPresenter: P? = null
 
     override fun onCreateView(

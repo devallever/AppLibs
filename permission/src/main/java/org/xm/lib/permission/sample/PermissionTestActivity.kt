@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.xm.lib.permission.PermissionListener
 import org.xm.lib.permission.PermissionManager
-import org.xm.lib.core.util.ToastUtils
 import org.xm.lib.core.util.log
 import org.xm.lib.core.util.toast
 import org.xm.lib.permission.R
@@ -22,7 +21,7 @@ class PermissionTestActivity : AppCompatActivity() {
             }
 
             override fun onDenied(deniedList: MutableList<String>) {
-                ToastUtils.show("onDenied")
+                toast("onDenied")
                 log("onDenied")
             }
 

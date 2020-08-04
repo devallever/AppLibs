@@ -33,6 +33,7 @@ import java.text.DecimalFormat;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
+@Deprecated
 public class FileUtil {
 
     private static final String LOG_TAG = "FileUtil";

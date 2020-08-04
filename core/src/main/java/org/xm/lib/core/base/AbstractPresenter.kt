@@ -7,6 +7,7 @@ import java.lang.ref.WeakReference
  * Created by allever on 18-2-28.
  */
 abstract class AbstractPresenter<V> {
+
     //View类(Activity Fragment, View(控件))接口弱引用
     protected var mViewRef: Reference<V?>? = null
 

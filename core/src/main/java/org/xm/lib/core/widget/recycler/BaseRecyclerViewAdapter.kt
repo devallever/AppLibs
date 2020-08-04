@@ -1,11 +1,10 @@
 package org.xm.lib.core.widget.recycler
 
 import android.content.Context
+import android.view.ViewGroup
 import androidx.annotation.IntRange
 import androidx.annotation.LayoutRes
-import android.view.ViewGroup
-
-import java.util.ArrayList
+import java.util.*
 
 
 /***
@@ -13,10 +12,14 @@ import java.util.ArrayList
  * https://blog.csdn.net/qq_35605213/article/details/80176558
  * @param <T>
 </T> */
-abstract class BaseRecyclerViewAdapter<T> : androidx.recyclerview.widget.RecyclerView.Adapter<BaseViewHolder> {
+abstract class BaseRecyclerViewAdapter<T> :
+    androidx.recyclerview.widget.RecyclerView.Adapter<BaseViewHolder> {
     protected var mContext: Context
+
     protected var mLayoutResId: Int = 0
+
     var mItemListener: ItemListener? = null
+
     var mData: MutableList<T>
 
     constructor(context: Context, @LayoutRes layoutRes: Int) {

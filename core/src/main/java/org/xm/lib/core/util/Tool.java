@@ -29,7 +29,7 @@ public class Tool {
             context.startActivity(intent);
         } catch (Exception e) {
             e.printStackTrace();
-            ToastUtils.INSTANCE.show(context.getResources().getString(R.string.core_has_not_google_service));
+            ExtFunKt.toast(R.string.core_has_not_google_service);
         }
     }
 

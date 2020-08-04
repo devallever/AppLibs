@@ -1,4 +1,4 @@
-package org.xm.lib.notch;
+package org.xm.lib.core.util;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
@@ -13,47 +13,39 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
-/**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2018/07/04
- *     desc  : utils about rom
- * </pre>
- */
 public final class RomUtils {
 
-    private static final String[] ROM_HUAWEI    = {"huawei"};
-    private static final String[] ROM_VIVO      = {"vivo"};
-    private static final String[] ROM_XIAOMI    = {"xiaomi"};
-    private static final String[] ROM_OPPO      = {"oppo"};
-    private static final String[] ROM_LEECO     = {"leeco", "letv"};
-    private static final String[] ROM_360       = {"360", "qiku"};
-    private static final String[] ROM_ZTE       = {"zte"};
-    private static final String[] ROM_ONEPLUS   = {"oneplus"};
-    private static final String[] ROM_NUBIA     = {"nubia"};
-    private static final String[] ROM_COOLPAD   = {"coolpad", "yulong"};
-    private static final String[] ROM_LG        = {"lg", "lge"};
-    private static final String[] ROM_GOOGLE    = {"google"};
-    private static final String[] ROM_SAMSUNG   = {"samsung"};
-    private static final String[] ROM_MEIZU     = {"meizu"};
-    private static final String[] ROM_LENOVO    = {"lenovo"};
+    private static final String[] ROM_HUAWEI = {"huawei"};
+    private static final String[] ROM_VIVO = {"vivo"};
+    private static final String[] ROM_XIAOMI = {"xiaomi"};
+    private static final String[] ROM_OPPO = {"oppo"};
+    private static final String[] ROM_LEECO = {"leeco", "letv"};
+    private static final String[] ROM_360 = {"360", "qiku"};
+    private static final String[] ROM_ZTE = {"zte"};
+    private static final String[] ROM_ONEPLUS = {"oneplus"};
+    private static final String[] ROM_NUBIA = {"nubia"};
+    private static final String[] ROM_COOLPAD = {"coolpad", "yulong"};
+    private static final String[] ROM_LG = {"lg", "lge"};
+    private static final String[] ROM_GOOGLE = {"google"};
+    private static final String[] ROM_SAMSUNG = {"samsung"};
+    private static final String[] ROM_MEIZU = {"meizu"};
+    private static final String[] ROM_LENOVO = {"lenovo"};
     private static final String[] ROM_SMARTISAN = {"smartisan"};
-    private static final String[] ROM_HTC       = {"htc"};
-    private static final String[] ROM_SONY      = {"sony"};
-    private static final String[] ROM_GIONEE    = {"gionee", "amigo"};
-    private static final String[] ROM_MOTOROLA  = {"motorola"};
+    private static final String[] ROM_HTC = {"htc"};
+    private static final String[] ROM_SONY = {"sony"};
+    private static final String[] ROM_GIONEE = {"gionee", "amigo"};
+    private static final String[] ROM_MOTOROLA = {"motorola"};
 
-    private static final String VERSION_PROPERTY_HUAWEI  = "ro.build.version.emui";
-    private static final String VERSION_PROPERTY_VIVO    = "ro.vivo.os.build.display.id";
-    private static final String VERSION_PROPERTY_XIAOMI  = "ro.build.version.incremental";
-    private static final String VERSION_PROPERTY_OPPO    = "ro.build.version.opporom";
-    private static final String VERSION_PROPERTY_LEECO   = "ro.letv.release.version";
-    private static final String VERSION_PROPERTY_360     = "ro.build.uiversion";
-    private static final String VERSION_PROPERTY_ZTE     = "ro.build.MiFavor_version";
+    private static final String VERSION_PROPERTY_HUAWEI = "ro.build.version.emui";
+    private static final String VERSION_PROPERTY_VIVO = "ro.vivo.os.build.display.id";
+    private static final String VERSION_PROPERTY_XIAOMI = "ro.build.version.incremental";
+    private static final String VERSION_PROPERTY_OPPO = "ro.build.version.opporom";
+    private static final String VERSION_PROPERTY_LEECO = "ro.letv.release.version";
+    private static final String VERSION_PROPERTY_360 = "ro.build.uiversion";
+    private static final String VERSION_PROPERTY_ZTE = "ro.build.MiFavor_version";
     private static final String VERSION_PROPERTY_ONEPLUS = "ro.rom.version";
-    private static final String VERSION_PROPERTY_NUBIA   = "ro.build.rom.id";
-    private final static String UNKNOWN                  = "unknown";
+    private static final String VERSION_PROPERTY_NUBIA = "ro.build.rom.id";
+    private final static String UNKNOWN = "unknown";
 
     private static RomInfo bean = null;
 
@@ -247,9 +239,7 @@ public final class RomUtils {
      * @return the rom's information
      */
     public static RomInfo getRomInfo() {
-        if (bean != null) {
-            return bean;
-        }
+        if (bean != null) return bean;
         bean = new RomInfo();
         final String brand = getBrand();
         final String manufacturer = getManufacturer();
@@ -350,7 +340,7 @@ public final class RomUtils {
             if (!TextUtils.isEmpty(manufacturer)) {
                 return manufacturer.toLowerCase();
             }
-        } catch (Throwable ignore) { /**/ }
+        } catch (Throwable ignore) {/**/}
         return UNKNOWN;
     }
 
@@ -360,7 +350,7 @@ public final class RomUtils {
             if (!TextUtils.isEmpty(brand)) {
                 return brand.toLowerCase();
             }
-        } catch (Throwable ignore) { /**/ }
+        } catch (Throwable ignore) {/**/}
         return UNKNOWN;
     }
 
@@ -375,7 +365,7 @@ public final class RomUtils {
                 if (!TextUtils.isEmpty(display)) {
                     ret = display.toLowerCase();
                 }
-            } catch (Throwable ignore) { /**/ }
+            } catch (Throwable ignore) {/**/}
         }
         if (TextUtils.isEmpty(ret)) {
             return UNKNOWN;
@@ -385,13 +375,9 @@ public final class RomUtils {
 
     private static String getSystemProperty(final String name) {
         String prop = getSystemPropertyByShell(name);
-        if (!TextUtils.isEmpty(prop)) {
-            return prop;
-        }
+        if (!TextUtils.isEmpty(prop)) return prop;
         prop = getSystemPropertyByStream(name);
-        if (!TextUtils.isEmpty(prop)) {
-            return prop;
-        }
+        if (!TextUtils.isEmpty(prop)) return prop;
         if (Build.VERSION.SDK_INT < 28) {
             return getSystemPropertyByReflect(name);
         }
@@ -413,7 +399,7 @@ public final class RomUtils {
             if (input != null) {
                 try {
                     input.close();
-                } catch (IOException ignore) { /**/ }
+                } catch (IOException ignore) {/**/}
             }
         }
         return "";
@@ -427,7 +413,7 @@ public final class RomUtils {
             );
             prop.load(is);
             return prop.getProperty(key, "");
-        } catch (Exception ignore) { /**/ }
+        } catch (Exception ignore) {/**/}
         return "";
     }
 
@@ -437,7 +423,7 @@ public final class RomUtils {
             Class<?> clz = Class.forName("android.os.SystemProperties");
             Method getMethod = clz.getMethod("get", String.class, String.class);
             return (String) getMethod.invoke(clz, key, "");
-        } catch (Exception e) { /**/ }
+        } catch (Exception e) {/**/}
         return "";
     }
 

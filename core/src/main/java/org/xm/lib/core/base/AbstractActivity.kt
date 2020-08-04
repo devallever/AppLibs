@@ -13,8 +13,11 @@ import org.xm.lib.core.util.toast
 import java.lang.ref.WeakReference
 
 abstract class AbstractActivity : AppCompatActivity() {
+
     protected val mHandler = Handler(Looper.getMainLooper())
+
     private var mWeakRefActivity: WeakReference<Activity>? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         log(this.javaClass.simpleName)
@@ -33,7 +36,7 @@ abstract class AbstractActivity : AppCompatActivity() {
             runnable?.run()
             super.onBackPressed()
         } else {
-            toast(getString(R.string.core_click_again_to_exit))
+            toast(R.string.core_click_again_to_exit)
             firstPressedBackTime = System.currentTimeMillis()
         }
     }

@@ -11,6 +11,7 @@ import android.graphics.Path;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 
@@ -18,7 +19,6 @@ import androidx.annotation.Keep;
 import androidx.annotation.Nullable;
 
 import org.xm.lib.core.util.DisplayUtils;
-import org.xm.lib.core.util.LogUtils;
 
 /**
  * @author allever
@@ -27,6 +27,8 @@ import org.xm.lib.core.util.LogUtils;
  * @Github https://github.com/ChengangFeng/TickView
  */
 public class CheckView extends View {
+
+    private static final String TAG = CheckView.class.getSimpleName();
 
     private static final int DEFAULT_SIZE = DisplayUtils.INSTANCE.dip2px(36);
     private static final int DEFAULT_WIDTH = DEFAULT_SIZE;
@@ -336,6 +338,6 @@ public class CheckView extends View {
     }
 
     private void log(String msg) {
-        LogUtils.INSTANCE.d(msg);
+        Log.d(TAG, msg);
     }
 }

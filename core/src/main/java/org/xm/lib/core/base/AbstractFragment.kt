@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import org.xm.lib.core.util.log
 
 abstract open class AbstractFragment : Fragment() {
+
     protected val mHandler = Handler(Looper.getMainLooper())
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         log(this::class.java.simpleName)

@@ -15,10 +15,13 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RatingBar
 import android.widget.TextView
+import androidx.collection.SparseArrayCompat
+import androidx.recyclerview.widget.RecyclerView
 
 class BaseViewHolder(private val mContext: Context, itemView: View) :
-    androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
-    private val mViews: androidx.collection.SparseArrayCompat<View> = androidx.collection.SparseArrayCompat()
+    RecyclerView.ViewHolder(itemView) {
+
+    private val mViews: SparseArrayCompat<View> = SparseArrayCompat()
 
     fun <V : View> getView(@IdRes res: Int): V? {
         var v: View? = mViews.get(res)

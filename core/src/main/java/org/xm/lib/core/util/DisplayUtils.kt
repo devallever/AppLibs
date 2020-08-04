@@ -12,8 +12,6 @@ import org.xm.lib.core.base.App
 
 object DisplayUtils {
 
-    private val TAG = DisplayUtils::class.java.simpleName
-
     /**
      * 将px转换成dip或dp
      * @param context
