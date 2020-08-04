@@ -1,4 +1,4 @@
-
+include ':util'
 rootProject.name = "AppLibs"
 
 include ':umeng'
