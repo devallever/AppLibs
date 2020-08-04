@@ -1,0 +1,13 @@
+include ':umeng'
+rootProject.name = "AppLibs"
+
+include ':recommend'
+include ':widget'
+include ':permission'
+include ':notchcompat'
+include ':httpsglide'
+include ':glideloader'
+include ':imageloader'
+include ':comment'
+include ':common'
+include ':app'
