@@ -1,0 +1,13 @@
+<resources>
+    <string name="core_app_name">CoreLib</string>
+
+    <string name="core_click_again_to_exit">Please click again to exit</string>
+
+    <string name="core_feed_back_subject">Your suggestion</string>
+    <string name="core_feed_back_content">We would love to hear your suggestions:</string>
+    <string name="core_select_mail_app">Please select a mail application</string>
+    <string name="core_has_not_google_service">Google services are not installed</string>
+    <string name="core_share_to">share to</string>
+    <string name="core_share_tips_no_intent">No shareable apps found</string>
+
+</resources>

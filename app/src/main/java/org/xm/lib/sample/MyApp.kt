@@ -1,6 +1,6 @@
 package org.xm.lib.sample
 
-import com.allever.lib.common.app.App
+import org.xm.lib.core.base.App
 
 class MyApp: App() {
     override fun onCreate() {

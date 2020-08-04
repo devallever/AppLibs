@@ -41,7 +41,7 @@
             android:src="@drawable/recommend_face"
             android:layout_margin="10dp"
             android:visibility="visible">
-            <com.allever.lib.recommend.AnimationImageView
+            <org.xm.lib.promote.widget.AnimationImageView
                 android:id="@+id/ivRecommendA"
                 android:layout_weight="1"
                 android:layout_width="54dp"
@@ -70,7 +70,7 @@
             android:src="@drawable/recommend_face"
             android:layout_margin="10dp"
             android:visibility="visible">
-            <com.allever.lib.recommend.AnimationImageView
+            <org.xm.lib.promote.widget.AnimationImageView
                 android:id="@+id/ivRecommendB"
                 android:layout_weight="1"
                 android:layout_width="54dp"
@@ -99,7 +99,7 @@
             android:src="@drawable/recommend_face"
             android:layout_margin="10dp"
             android:visibility="visible">
-            <com.allever.lib.recommend.AnimationImageView
+            <org.xm.lib.promote.widget.AnimationImageView
                 android:id="@+id/ivRecommendC"
                 android:layout_weight="1"
                 android:layout_width="54dp"

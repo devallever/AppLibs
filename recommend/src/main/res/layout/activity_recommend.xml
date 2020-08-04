@@ -41,7 +41,7 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <com.allever.android.recyclerview.widget.MyRecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRecommendList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

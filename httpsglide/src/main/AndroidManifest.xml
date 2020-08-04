@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-		  package="com.allever.lib.httpsglide">
+		  package="org.xm.lib.https.glide">
 	<application>
 		<meta-data
-			android:name="com.allever.lib.httpsglide.okhttp3.OkHttpGlideModule"
+			android:name="org.xm.lib.https.glide.okhttp3.OkHttpGlideModule"
 			android:value="GlideModule"/>
 	</application>
 </manifest>

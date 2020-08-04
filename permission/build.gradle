@@ -27,7 +27,7 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.yanzhenjie.permission:support:$and_permission_version"
-    implementation project(path: ':common')
+    implementation project(path: ':core')
 }
 
 repositories {
