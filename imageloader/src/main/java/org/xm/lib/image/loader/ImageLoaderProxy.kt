@@ -5,9 +5,8 @@ import android.widget.ImageView
 import java.io.File
 
 interface ImageLoaderProxy {
-    fun loadImage(context: Context, url: String, imageView: ImageView)
-    fun loadImage(context: Context, file: File, imageView: ImageView)
-    fun loadImage(context: Context, resId: Int, imageView: ImageView)
+    fun load(imageView: ImageView, obj: Any)
+    fun loadFromUrl(imageView: ImageView, url: String)
     fun resumeRequest(context: Context)
     fun stopRequest(context: Context)
 }

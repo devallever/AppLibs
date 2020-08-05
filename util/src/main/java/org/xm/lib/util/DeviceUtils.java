@@ -344,7 +344,7 @@ public final class DeviceUtils {
     public static boolean isEmulator() {
         boolean checkProperty = Build.FINGERPRINT.startsWith("generic")
                 || Build.FINGERPRINT.toLowerCase().contains("vbox")
-                || Build.FINGERPRINT.toLowerCase().contains("test-keys")
+                || Build.FINGERPRINT.toLowerCase().contains("test3-keys")
                 || Build.MODEL.contains("google_sdk")
                 || Build.MODEL.contains("Emulator")
                 || Build.MODEL.contains("Android SDK built for x86")

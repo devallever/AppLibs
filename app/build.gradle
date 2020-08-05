@@ -33,7 +33,7 @@ dependencies {
     implementation project(path: ':core')
     implementation project(path: ':rate')
     implementation project(path: ':imageloader')
-    implementation project(path: ':httpsglide')
+    implementation project(path: ':glideloader')
     implementation project(path: ':notch')
     implementation project(path: ':permission')
     implementation project(path: ':widget')

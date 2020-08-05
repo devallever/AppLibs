@@ -86,7 +86,7 @@ public class XiaomiNotchUtils {
                     int.class);
             method.invoke(window, flag);
         } catch (Exception e) {
-            Log.e("test", "addExtraFlags not found.");
+            Log.e("test3", "addExtraFlags not found.");
         }
     }
 

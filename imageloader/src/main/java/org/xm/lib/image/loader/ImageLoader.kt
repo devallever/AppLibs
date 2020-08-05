@@ -2,27 +2,28 @@ package org.xm.lib.image.loader
 
 import android.content.Context
 import android.widget.ImageView
-import java.io.File
 
 object ImageLoader {
 
-    private var mProxy: ImageLoaderProxy? =
-        DefaultImageLoaderProxy()
+    private var mProxy: ImageLoaderProxy = DefaultImageLoaderProxy()
 
     fun setProxy(proxy: ImageLoaderProxy) {
         mProxy = proxy
     }
 
-    fun loadImage(context: Context, url: String, imageView: ImageView) {
-        mProxy?.loadImage(context, url, imageView)
+    fun load(imageView: ImageView, obj: Any) {
+        mProxy.load(imageView, obj)
     }
 
-    fun loadImage(context: Context, file: File, imageView: ImageView) {
-        mProxy?.loadImage(context, file, imageView)
+    fun loadFromUrl(imageView: ImageView, url: String) {
+        mProxy.loadFromUrl(imageView, url)
     }
 
-    fun loadImage(context: Context, resId: Int, imageView: ImageView) {
-        mProxy?.loadImage(context, resId, imageView)
+    fun pauseRequests(context: Context) {
+        mProxy.stopRequest(context)
     }
 
+    fun resumeRequests(context: Context) {
+        mProxy.resumeRequest(context)
+    }
 }

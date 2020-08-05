@@ -37,11 +37,11 @@ public class HwNotchUtils {
             Method get = HwNotchSizeUtil.getMethod("hasNotchInScreen");
             ret = (boolean) get.invoke(HwNotchSizeUtil);
         } catch (ClassNotFoundException e) {
-            Log.e("test", "hasNotchInScreen ClassNotFoundException");
+            Log.e("test3", "hasNotchInScreen ClassNotFoundException");
         } catch (NoSuchMethodException e) {
-            Log.e("test", "hasNotchInScreen NoSuchMethodException");
+            Log.e("test3", "hasNotchInScreen NoSuchMethodException");
         } catch (Exception e) {
-            Log.e("test", "hasNotchInScreen Exception");
+            Log.e("test3", "hasNotchInScreen Exception");
         } finally {
             return ret;
         }
@@ -61,11 +61,11 @@ public class HwNotchUtils {
             Method get = HwNotchSizeUtil.getMethod("getNotchSize");
             ret = (int[]) get.invoke(HwNotchSizeUtil);
         } catch (ClassNotFoundException e) {
-            Log.e("test", "getNotchSize ClassNotFoundException");
+            Log.e("test3", "getNotchSize ClassNotFoundException");
         } catch (NoSuchMethodException e) {
-            Log.e("test", "getNotchSize NoSuchMethodException");
+            Log.e("test3", "getNotchSize NoSuchMethodException");
         } catch (Exception e) {
-            Log.e("test", "getNotchSize Exception");
+            Log.e("test3", "getNotchSize Exception");
         } finally {
             return ret;
         }
@@ -91,9 +91,9 @@ public class HwNotchUtils {
             method.invoke(layoutParamsExObj, FLAG_NOTCH_SUPPORT);
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException
                 | InvocationTargetException e) {
-            Log.e("test", "hw add notch screen flag api error");
+            Log.e("test3", "hw add notch screen flag api error");
         } catch (Exception e) {
-            Log.e("test", "other Exception");
+            Log.e("test3", "other Exception");
         }
     }
 
@@ -117,9 +117,9 @@ public class HwNotchUtils {
             method.invoke(layoutParamsExObj, FLAG_NOTCH_SUPPORT);
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InstantiationException
                 | InvocationTargetException e) {
-            Log.e("test", "hw clear notch screen flag api error");
+            Log.e("test3", "hw clear notch screen flag api error");
         } catch (Exception e) {
-            Log.e("test", "other Exception");
+            Log.e("test3", "other Exception");
         }
     }
 
