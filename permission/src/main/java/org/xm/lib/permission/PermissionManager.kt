@@ -25,35 +25,12 @@ object PermissionManager {
             .start()
     }
 
-    fun request(
-        activity: Activity?,
-        listener: PermissionListener,
-        vararg permissions: String
-    ) {
-        FastPermission.request(
-            activity,
-            listener,
-            *permissions
-        )
-    }
-
-    fun request(fragment: Fragment, listener: PermissionListener, vararg permissions: String) {
-        FastPermission.request(
-            fragment,
-            listener,
-            *permissions
-        )
-    }
-
     fun hasPermissions(vararg permissions: String): Boolean {
-        return FastPermission.hasPermissions(
-            App.context,
-            *permissions
-        )
+        return PermissionCompat.hasPermission(App.context, *permissions)
     }
 
     fun alwaysDenyPermissions(activity: Activity, vararg permissions: String): Boolean =
-        FastPermission.hasAlwaysDeniedPermission(
+        PermissionCompat.hasAlwaysDeniedPermission(
             activity,
             *permissions
         )
