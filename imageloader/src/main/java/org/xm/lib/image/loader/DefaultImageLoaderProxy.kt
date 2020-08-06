@@ -11,7 +11,8 @@ import org.xm.lib.core.util.log
 import org.xm.lib.image.loader.util.CacheMemoryStaticUtils
 import org.xm.lib.image.loader.util.ConvertUtils
 import org.xm.lib.image.loader.util.StringUtils
-import java.io.*
+import java.io.File
+import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
 import java.security.MessageDigest

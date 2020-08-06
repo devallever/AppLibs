@@ -8,14 +8,12 @@ import java.io.IOException
  */
 object CloseUtil {
     fun closeQuickly(closeable: Closeable?) {
-        if (closeable != null) {
-            try {
-                closeable.close()
-            } catch (ioe: IOException) {
-                ioe.printStackTrace()
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
+        try {
+            closeable?.close()
+        } catch (ioe: IOException) {
+            ioe.printStackTrace()
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 }
