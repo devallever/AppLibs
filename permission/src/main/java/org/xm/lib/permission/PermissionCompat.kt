@@ -22,13 +22,13 @@ import java.util.Arrays
  */
 
 object PermissionCompat {
-    val PERMISSION_RECORD_AUDIO = Manifest.permission.RECORD_AUDIO
-    val PERMISSION_READ_EXTRNAL_STORAGE = Manifest.permission.READ_EXTERNAL_STORAGE
-    val PERMISSION_CAMERA = Manifest.permission.CAMERA
-    val PERMISSION_WRITE_EXTERNAL_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE
+//    val PERMISSION_RECORD_AUDIO = Manifest.permission.RECORD_AUDIO
+//    val PERMISSION_READ_EXTRNAL_STORAGE = Manifest.permission.READ_EXTERNAL_STORAGE
+//    val PERMISSION_CAMERA = Manifest.permission.CAMERA
+//    val PERMISSION_WRITE_EXTERNAL_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE
 
     fun hasPermission(context: Context, vararg permissions: String): Boolean {
-        return hasPermission(context, Arrays.asList(*permissions))
+        return hasPermission(context, listOf(*permissions))
     }
 
     fun hasPermission(context: Context, permissions: List<String>): Boolean {

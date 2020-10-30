@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
 
     defaultConfig {
@@ -25,8 +25,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path: ':core')
-    implementation project(path: ':widget')
-    implementation project(path: ':glideloader')
     //retrofit
     api 'com.squareup.retrofit2:retrofit:2.6.0'
     api 'com.squareup.retrofit2:converter-gson:2.6.0'

@@ -6,6 +6,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.xm.lib.core.base.App
 import org.xm.lib.core.util.log
 import org.xm.lib.image.loader.ImageLoader
+import org.xm.lib.util.ActivityUtils
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 //        ivImage.setImageBitmap(BitmapFactory.decodeResource(resources, int))
         ImageLoader.loadFromUrl(ivImage, "http://pic1.win4000.com/pic/a/e6/c4f0388de0.jpg")
 //        log(App.context.cacheDir.path)
+
+        ActivityUtils.finishActivity(MainActivity::class.java)
     }
 
     override fun onResume() {

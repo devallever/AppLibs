@@ -60,11 +60,11 @@ object DisplayUtils {
     }
 
     fun getScreenWidth(): Int {
-        return getScreenRealMetrics().widthPixels
+        return getDisplayMetrics().widthPixels
     }
 
     fun getScreenHeight(): Int {
-        return getScreenRealMetrics().heightPixels
+        return getDisplayMetrics().heightPixels
     }
 
     private fun getScreenRealMetrics(): DisplayMetrics {

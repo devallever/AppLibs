@@ -1,3 +1,4 @@
+include ':network'
 include ':util'
 rootProject.name = "AppLibs"
 

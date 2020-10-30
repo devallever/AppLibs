@@ -16,7 +16,7 @@ abstract class AbstractPresenter<V> {
     }
 
     protected val view: V?
-        protected get() = mViewRef!!.get()
+        protected get() = mViewRef?.get()
 
     val isAttachedView: Boolean
         get() = mViewRef != null && mViewRef?.get() != null
