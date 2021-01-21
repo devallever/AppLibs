@@ -319,7 +319,7 @@ public final class DeviceUtils {
             return Build.SUPPORTED_ABIS;
         } else {
             if (!TextUtils.isEmpty(Build.CPU_ABI2)) {
-                return new String[]{Build.CPU_ABI, Build.CPU_ABI2};
+                return new String[]{Build.CPU_ABI, Build.CPU_ABI};
             }
             return new String[]{Build.CPU_ABI};
         }
